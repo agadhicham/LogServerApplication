@@ -1,0 +1,33 @@
+
+<div class="" style="text-align: center">
+    <h2>Liste des fichier storer</h2>
+  </div>
+  <!-- <div class="col-sm-12 row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6 row">
+        <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+          <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+    </div>
+  </div> -->
+  <div class="uk-child-width-1-4@s" uk-grid>
+      <div *ngFor="let fichier of fichier">
+          <div class="uk-card uk-card-default uk-card-small uk-card-body uk-card-hover" >
+              <p>
+                  <span class="uk-label uk-label-secondary">Fichier avec le nom:</span> {{fichier?.fileName}}
+                </p> 
+                <p>
+                  <span class="uk-label uk-label-secondary">Fichier sous numéro:</span> {{fichier?.id}}
+                </p>
+                <p>
+                  <span class="uk-label uk-label-success">Type de ce fichier:</span>  {{fichier?.fileType}}
+                </p>
+                <!-- <p>
+                  <span class="uk-label uk-label-warning">Objet récuperer:</span> {{fichier?.data}}
+                </p>       -->
+                <div class="uk-card-footer">
+                  <button (onclick)="getOneFile(fichier.id)" [routerLink]="['/fichierAutomatiser',fichier.id]" routerLinkActive="router-link-active"  class="btn btn-primary btn-sm">selecter</button>
+                </div>
+              </div>
+          </div>
+      </div>
+  

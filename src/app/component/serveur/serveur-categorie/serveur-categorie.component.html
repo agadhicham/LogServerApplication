@@ -1,0 +1,28 @@
+
+<div class="" style="text-align: center">
+    <h2>Liste des serveurs</h2>
+  </div>
+  <div class="uk-child-width-1-4@s" uk-grid>
+      <div *ngFor="let serveur of categoriesServeurs">
+          <div class="uk-card uk-card-secondary uk-card-small uk-card-body uk-card-hover">
+              <p>
+                  <span class="uk-label uk-label-secondary">serveur avec le nom:</span> {{serveur.nomCategorie}}
+                </p> 
+                <p>
+                  <span class="uk-label uk-label-secondary">serveur sous numéro:</span> {{serveur.id}}
+                </p>
+                <div class="uk-card-footer">               
+                  <!-- <button (onclick)="getFilesByServer(serveur.id)" [routerLink]="['/listFichierSelectionner',serveur.id]" routerLinkActive="router-link-active"  class="btn btn-primary btn-sm">selecter</button> -->
+                    <a  (onclick)="getFilesByServer(serveur.id)" [routerLink]="['/listFichierSelectionner',serveur.id]" routerLinkActive="router-link-active" class="uk-button uk-button-text">fichiers Logg genérer par ce serveur</a>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="modal-container" class="uk-modal-container" uk-modal>
+          <div class="uk-modal-dialog uk-modal-body">
+              <button class="uk-modal-close-default" type="button" uk-close></button>
+              <h2 class="uk-modal-title">Serveur :{{s?.id}}</h2>
+
+            </div>
+      </div>
