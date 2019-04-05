@@ -1,25 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { FichierService } from 'src/app/service/fichier.service';
 import { FichierModule } from 'src/app/model/fichier/fichier.module';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-fichier',
   templateUrl: './list-fichier.component.html',
   styleUrls: ['./list-fichier.component.css']
 })
+@Injectable({
+  providedIn: 'root'
+})
 export class ListFichierComponent implements OnInit {
-    private pageFichiers:any
+     pageFichiers:any
      listFichiers
-     fichier: FichierModule= new FichierModule()
+    // fichier: FichierModule= new FichierModule()
     page:number=0
     size:number=20
-    motCle:string=""
+    motCle:string="";
  
 
   constructor(private httpServiceFile:FichierService,private router:Router) { }
 
-  ngOnInit() {
+  ngOnInit() 
+  {
     this.httpServiceFile.searsheFile(this.motCle,this.size,this.page).subscribe(
       data=>{
         this.pageFichiers=data
@@ -28,21 +33,16 @@ export class ListFichierComponent implements OnInit {
       }
     )
   }
-  getFilesByServer(id:number){
-    // this.fichierServeur.getFilesByCategorie(id).subscribe(
-    //   data=>{
-    //       this.fichiersByCat=data
-    //       console.log(data)
-    //   }, error=>{
-    //     console.log(error)
-    //   }
-    // )
+
+
+  getFilesByServer(id:number)
+  {
     console.log(id)
     this.router.navigate(['listFichierSelectionner',id])
-
   }
 
-  doSearch() {
+  doSearch() 
+  {
     this.pageFichiers;
     this.httpServiceFile
       .searsheFile(this.motCle, this.page, this.size)
@@ -60,6 +60,8 @@ export class ListFichierComponent implements OnInit {
         }
       );
   }
+
+
   chercher() {
     this.doSearch();
   }

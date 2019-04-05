@@ -3,47 +3,109 @@
         <h2>Choisir un fichier à enregestrer</h2>
     </div>
     <div class="upload-content">
-        <div class="single-upload"  >
-            <h3>Action Avec Un Seul Fichier</h3>
-            <form id="singleUploadForm" name="singleUploadForm" #f="ngForm" (ngSubmit)="saveFile(f.value)" enctype="multipart/form-data">
-                <div class="uk-margin">
-                    <input type="file" name="file" class="file-input" required [(ngModel)]="fichier.file"
-                      minlength="4" appForbiddenName="bob" #file="ngModel" ngModel required>
-                    <div *ngIf="file.invalid && (file.dirty || file.touched)" class="alert alert-danger">
-  
-                      <div *ngIf="file.errors.required">
-                        fileName is required.
+     
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="panel-group">
+                      <div class="panel panell panel-info">
+                        <div class="panel-heading" id="flip2"> Action Avec Un Seul Fichier</div>
+                        <div class="panel-body" id="panel2">
+                            <div class="single-upload"  >        
+                                <form id="singleUploadForm" name="singleUploadForm" #f="ngForm" (ngSubmit)="saveFile(f.value)" enctype="multipart/form-data">  
+                                  <label for="pet-select">Choisir un serveur a le affecter:</label>            
+                    <select id="pet-select" class="form-control">
+                        <option value="">--Veuillez selectionner un--</option> 
+                        <option value="" *ngFor="let serveur of categoriesServeurs">{{serveur?.nomCategorie}}</option> 
+                      </select>    
+                                  <div class="uk-margin">
+                                        <input type="file" name="file" class="form-control" required [(ngModel)]="fichier.file"
+                                          minlength="4" appForbiddenName="bob" #file="ngModel" ngModel required>
+                                        <div *ngIf="file.invalid && (file.dirty || file.touched)" class="alert alert-danger">
+                      
+                                          <div *ngIf="file.errors.required">
+                                            fileName is required.
+                                          </div>
+                                          <div *ngIf="file.errors.minlength">
+                                            fileName must be at least 4 characters long.
+                                          </div>
+                                          <div *ngIf="file.errors.forbiddenName">
+                                            fileName cannot be Bob.
+                                          </div>
+                                        </div>
+                                      </div>
+                                  
+                                    <!-- <input id="singleFileUploadInput" type="file" name="file" class="file-input" required /> -->
+                                    <button type="submit" [disabled]="!f.valid" class="btn btn-info btn-sm">Enregestrer</button>
+                                </form>
+                    
+                        
+                    
+                                <div class="upload-response">
+                                    <div id="singleFileUploadError"></div>
+                                    <div id="singleFileUploadSuccess"></div>
+                                </div>
+                            </div>
+                        </div>
                       </div>
-                      <div *ngIf="file.errors.minlength">
-                        fileName must be at least 4 characters long.
                       </div>
-                      <div *ngIf="file.errors.forbiddenName">
-                        fileName cannot be Bob.
                       </div>
-                    </div>
-                  </div>
-              
-                <input id="singleFileUploadInput" type="file" name="file" class="file-input" required />
-                <button type="submit" [disabled]="!f.valid" class="primar btn btn-info btn-sm">Enregestrer</button>
-            </form>
-
-    
-
-            <div class="upload-response">
-                <div id="singleFileUploadError"></div>
-                <div id="singleFileUploadSuccess"></div>
             </div>
-        </div>
-        <div class="multiple-upload">
-            <h3>Action Avec Une Liste Fichier</h3>
-            <form id="multipleUploadForm" name="multipleUploadForm">
-                <input id="multipleFileUploadInput" type="file" name="files" class="file-input" multiple required />
-                <button type="submit" class="primary submit-btn">Enregestrer</button>
-            </form>
-            <div class="upload-response">
-                <div id="multipleFileUploadError"></div>
-                <div id="multipleFileUploadSuccess"></div>
-            </div>
+                      <div class="col-md-6">
+                      <div class="container">
+                          <div class="panel-group">
+                            <div class="panel panell panel-info">
+                              <div class="panel-heading" id="flip4">Action Avec Une Liste Fichiers</div>
+                              <div class="panel-body" id="panel4">
+                                  <div class="multiple-upload">
+                                      
+                                      <form id="multipleUploadForm" name="multipleUploadForm" >
+                                          <label for="pet-select">Choisir un serveur a le affecter:</label>
+                    
+                                          <select id="pet-select" class="form-control">
+                                              <option value="">--Veuillez selectionner un--</option>
+                                              <option value="" *ngFor="let serveur of categoriesServeurs">{{serveur?.nomCategorie}}</option> 
+
+                                              
+                                          </select>
+
+
+                                          <div class="uk-margin">
+                                              <input type="file" name="file" class="form-control" required [(ngModel)]="fichier.file"
+                                                minlength="4" appForbiddenName="bob" #file="ngModel" ngModel required>
+                                              <div *ngIf="file.invalid && (file.dirty || file.touched)" class="alert alert-danger">
+                            
+                                                <div *ngIf="file.errors.required">
+                                                  fileName is required.
+                                                </div>
+                                                <div *ngIf="file.errors.minlength">
+                                                  fileName must be at least 4 characters long.
+                                                </div>
+                                                <div *ngIf="file.errors.forbiddenName">
+                                                  fileName cannot be Bob.
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                          <button type="submit"  [disabled]="!f.valid" class="btn btn-info btn-sm">Enregestrer</button>
+                                      </form>
+                                     
+                                  </div>    
+                              </div>
+                            </div>
+                            </div>
+                            </div>     
+           </div>
+         
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+

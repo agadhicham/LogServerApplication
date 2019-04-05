@@ -16,6 +16,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule }    from '@angular/forms';
 import { FichierAutomatComponent } from './component/fichierAutomatisation/fichier-automat/fichier-automat.component';
 import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
+import * as $ from 'jquery/dist/jquery.min.js';
+import { HomeApplicationLoggComponent } from './component/vue/home-application-logg/home-application-logg.component';
 
 
 
@@ -29,6 +31,7 @@ import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
     ServeurCategorieComponent,
     FichierSelectionnerComponent,
     FichierAutomatComponent,
+    HomeApplicationLoggComponent,
     
    // HttpClientModule
     

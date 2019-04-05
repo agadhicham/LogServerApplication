@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { ServeurService } from 'src/app/service/serveur.service';
 
 @Component({
   selector: 'app-nouveau-fichier',
@@ -12,11 +13,18 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./nouveau-fichier.component.css']
 })
 export class NouveauFichierComponent implements OnInit {
-
+  categoriesServeurs
   fichier:FichierModule=new FichierModule()
-  constructor(private fichierService:FichierService,public router:Router) { }
+  constructor(private fichierService:FichierService,public router:Router,private categorieServer: ServeurService) { }
 
-  ngOnInit() {
+  ngOnInit()
+   {
+    this.categorieServer.getCategories()
+      .subscribe(data=>{
+        this.categoriesServeurs=data
+      },error=>{
+        console.log(error)
+      }) 
   }
 
 

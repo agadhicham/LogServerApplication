@@ -27,6 +27,10 @@ getFilesByCategorie(id:number):Observable<any>{
   return this.httpFile.get(this.urlFileApi+"/filesOfCat/" +id)
 }
 
+getFilesByCategori(id:string):Observable<any>{
+  return this.httpFile.get(this.urlFileApi+"/filesOfCategorie/" +id)
+}
+
 saveFile(fichier:FichierModule):Observable<any>{
   //const headers = new HttpHeaders().set("","");
 
@@ -35,6 +39,10 @@ saveFile(fichier:FichierModule):Observable<any>{
 }
 getOneFile(id:any):Observable<any>{
    return this.httpFile.get(this.urlFileApi+"/downloadFile/"+id,{responseType: 'text'})
+}
+
+getOneFilePlus(id:any):Observable<any>{
+  return this.httpFile.get(this.urlFileApi+"/downloadFile/"+id)
 }
 
 searsheFile(motCle:string,page:number,size:number):Observable<any>{

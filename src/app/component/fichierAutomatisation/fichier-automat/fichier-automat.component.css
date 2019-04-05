@@ -1,8 +1,6 @@
-.back{
-    background-color: black;
-    margin-left: 50px;
-    margin-right: 50px;
+.row{
+    margin-top: 20px;
 }
 .text{
-    color: yellowgreen
+     size: 14px;
 }

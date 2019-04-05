@@ -5,6 +5,7 @@ import { NouveauFichierComponent } from './component/fichier/nouveau-fichier/nou
 import { ServeurCategorieComponent } from './component/serveur/serveur-categorie/serveur-categorie.component';
 import { FichierSelectionnerComponent } from './component/fichier/fichier-selectionner/fichier-selectionner.component';
 import { FichierAutomatComponent } from './component/fichierAutomatisation/fichier-automat/fichier-automat.component';
+import { HomeApplicationLoggComponent } from './component/vue/home-application-logg/home-application-logg.component';
 
 const routes: Routes = [
 {path:'',pathMatch:"full",redirectTo:"/serveurCat"},
@@ -12,7 +13,7 @@ const routes: Routes = [
 {path:"nouveauFichier", component:NouveauFichierComponent},
 {path:"serveurCat", component:ServeurCategorieComponent},
 {path:"fichierAutomatiser/:id", component:FichierAutomatComponent},
-
+{path:"homeApplication", component:HomeApplicationLoggComponent},
 {path:'listFichierSelectionner/:id', component:FichierSelectionnerComponent}
 
 

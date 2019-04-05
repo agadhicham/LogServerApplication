@@ -10,7 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./serveur-categorie.component.css']
 })
 export class ServeurCategorieComponent implements OnInit {
-
+  imagesCategorieServeur:Array<string>=[
+    "assets/images/serveur1.jpg","assets/images/serveur2.jpg",
+    "assets/images/serveur3.jpg","assets/images/serveur4.jpg"
+  ]
+  imagesCategorie
   serv
   categoriesServeurs
   fichiersByCat:any
@@ -24,6 +28,10 @@ export class ServeurCategorieComponent implements OnInit {
   ngOnInit() {
     this.categorieServer.getCategories()
       .subscribe(data=>{
+         for(let image of this.imagesCategorieServeur){
+             console.log(image)
+         }
+
         this.categoriesServeurs=data
       },error=>{
         console.log(error)

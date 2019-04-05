@@ -1,39 +1,181 @@
-
+<!-- 
 
 <div class="" style="text-align: center">
-  <h2>fichier</h2>
+ <br>
 </div>
+
+
+<div class="container">
+    <div class="panel-group">
+      <div class="panel panele1 panel-info">
+        <div class="panel-heading" id="flip2">Actions</div>
+        <div class="panel-body" id="panel2">
+            <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+            <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+            <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+            <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button> <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+            <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+          </div>
+      </div>
+      </div>
+      </div>
 <div class="uk-child-width-1-1@s" uk-grid>
-    <div 
+    <div>
     
-    >
         <div class="uk-card back uk-card-default uk-card-small uk-card-body" >
-              <!-- <p>
+               <p>
                 <span class="uk-label uk-label-secondary">Fichier avec le nom:</span> {{fich?.fileName}}
               </p> 
               <p>
                 <span class="uk-label uk-label-success">Type de ce fichier:</span>  {{fich?.fileType}}
-              </p> -->
-               
-              <div class="text" [innerHTML]="fichier"></div>
+              </p> 
+
+              <div class="text" [innerHTML]="fichie"></div>
               
             </div>
         </div>
     </div>
+    <div class="container">
+  <div class="container">
+  <div class="panel-group">
+    <div class="panel pane panel-primary">
+      <div class="panel-heading">Autre Informations</div>
+      <div class="panel-body">
+        <div >
 
-    <div class="uk-child-width-1-1@s" uk-grid>
-      <div 
+            <div id="flip">Voir</div>
+            <div id="panel" >
+              <div >  
+              <p>
+                    Fichier avec le nom: {{fichier?.fileName}}
+                  </p> 
+                  <p>
+                    Type de ce fichier: {{fichier?.fileType}}
+                  </p>
+                </div>
+            </div>
      
-      >
-          <div class="uk-card back uk-card-default uk-card-small uk-card-body uk-card-hover"  >
-                <p>
-                  <span class="uk-label uk-label-secondary">Fichier avec le nom:</span> {{fichier?.fileName}}
-                </p> 
-                <p>
-                  <span class="uk-label uk-label-success">Type de ce fichier:</span>  {{fichier?.fileType}}
-                </p>
-              </div>
-          </div>
       </div>
+    </div>
+    </div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="panel-group">
+          <div class="panel panell panel-primary">
+            <div class="panel-heading">Choix de recherche</div>
+            <div class="panel-body">
+                   <div>     
+                    <div id="flip1">Par</div>
+                    <div id="panel1">
+              <a class="uk-button uk-button-text">exception java</a>                   
+                    </div>
+                  </div>
+                  <div>     
+                      <div id="flip3">exception serveur</div>
+                      <div id="panel3">
+                <a class="uk-button uk-button-text">Apache</a><br>                   
+                <a class="uk-button uk-button-text">Tomcat</a> <br>
+                <a class="uk-button uk-button-text">Jboss</a> 
+                      </div>
+                    </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        </div>
 
-  
+ -->
+
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="container">
+            <div class="panel-group">
+              <div class="panel panell panel-primary">
+                <div class="panel-heading" >Actions  <span id="flip2" uk-icon="triangle-down"></span></div>
+                <div class="panel-body" id="panel2">
+              <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+              <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button> <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
+                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+                </div>
+              </div>
+              </div>
+              </div>
+
+              <div class="container">
+                  <div class="panel-group">
+                    <div class="panel panell panel-primary">
+                      <div class="panel-heading" >Choix de recherche  <span id="flip4" uk-icon="triangle-down"></span></div>
+                      <div class="panel-body" id="panel4">
+                             <div>    
+                              <div id="flip1">Par  <span uk-icon="triangle-down"></span></div>
+                              <div id="panel1">
+                        <a class="uk-button uk-button-text">exception java</a>                   
+                              </div>
+                            </div>
+                            <div>     
+                                <div id="flip3">exception serveur  <span  uk-icon="triangle-down"></span>
+                                
+                                </div>
+                                <div id="panel3">
+                          <a class="uk-button uk-button-text">Apache</a><br>                   
+                          <a class="uk-button uk-button-text">Tomcat</a> <br>
+                          <a class="uk-button uk-button-text">Jboss</a> 
+                                </div>
+                              </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+             <div class="container">
+                  <div class="panel-group">
+                    <div class="panel pane panel-primary">
+                      <div class="panel-heading" >Autre Informations  <span id="flip5" uk-icon="triangle-down"></span></div>
+                      <div class="panel-body" id="panel5">
+                        <div >
+                
+                            <div id="flip">Voir plus <span id="flip5" uk-icon="triangle-down"></span></div>
+                            <div id="panel" >
+                              <div >  
+                              <p>
+                                    Fichier avec le nom: {{fichier?.fileName}}
+                                  </p> 
+                                  <p>
+                                    Type de ce fichier: {{fichier?.fileType}}
+                                  </p>
+                                  <p>
+                                      date d'action: {{fichier?.currrent}}
+                                    </p>
+                                </div>
+                            </div>
+                     
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+    <div class="col-md-8">
+        <div class="panel">
+
+            <div class="container">
+                <div class="panel-group">
+                  <div class="panel panell panel-danger">
+                    <div class="panel-heading">Fichier logg données </div>
+                    <div class="panel-body">
+                      <textarea class="text form-control" style="font-size: 14px;" rows="15" cols="136" [innerHTML]="fichie">
+                      </textarea>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+
+        </div>
+    </div>
+</div>
