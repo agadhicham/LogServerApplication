@@ -98,11 +98,29 @@
               <div class="panel panell panel-primary">
                 <div class="panel-heading" >Actions  <span id="flip2" uk-icon="triangle-down"></span></div>
                 <div class="panel-body" id="panel2">
-              <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
-                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
-              <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
-                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button> <input class="form-control in col-sm-10" type="text" [(ngModel)]="motCle" />
-                    <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
+                   <div class="row">
+                      Estimation :<p> Ce fichier vient de serveur ServeurX/Java</p>
+                      <div class="col-md-9">
+                        <input type="text" class="form-control" [(ngModel)]="recherche" name="recherche" id="recherche"> 
+                        
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-primary btn-sm" (click)="rechercherManuel()">Rechercher</button>
+                      </div>
+                   </div>
+
+                   <div class="row">
+                   <p> Fréquement utilisé: </p>
+                    <div class="col-md-9">
+                      <select name="" id="" class="form-control">
+                        <option value="">--Ensenble des mots sera utiliser selon les besoins--</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-primary btn-sm">Rechercher</button>
+                    </div>
+                 </div>
+
                 </div>
               </div>
               </div>
@@ -136,7 +154,7 @@
              <div class="container">
                   <div class="panel-group">
                     <div class="panel pane panel-primary">
-                      <div class="panel-heading" >Autre Informations  <span id="flip5" uk-icon="triangle-down"></span></div>
+                      <div class="panel-heading" >Autre Informations sur ce fichier <span id="flip5" uk-icon="triangle-down"></span></div>
                       <div class="panel-body" id="panel5">
                         <div >
                 
@@ -167,9 +185,9 @@
             <div class="container">
                 <div class="panel-group">
                   <div class="panel panell panel-danger">
-                    <div class="panel-heading">Fichier logg données </div>
+                    <div class="panel-heading">Fichier logg transformer en format <strong>.txt</strong></div>
                     <div class="panel-body">
-                      <textarea class="text form-control" style="font-size: 14px;" rows="15" cols="136" [innerHTML]="fichie">
+                      <textarea class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
                       </textarea>
                     </div>
                   </div>

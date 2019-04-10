@@ -21,7 +21,6 @@ import { HomeApplicationLoggComponent } from './component/vue/home-application-l
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

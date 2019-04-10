@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject, inject, Injectable } from '@angular/core';
+import { Component, OnInit, Inject, inject, Injectable, Pipe } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FichierService } from 'src/app/service/fichier.service';
 import { FichierModule } from 'src/app/model/fichier/fichier.module';
 import { DomSanitizer } from '@angular/platform-browser';
-import { template } from '@angular/core/src/render3';
+import { template, text } from '@angular/core/src/render3';
 import * as $ from 'jquery/dist/jquery.min.js';
 import { ListFichierComponent } from '../../fichier/list-fichier/list-fichier.component';
 import * as deepEqual from "deep-equal";
@@ -14,12 +14,15 @@ import * as deepEqual from "deep-equal";
   styleUrls: ['./fichier-automat.component.css']
  
 })
+@Pipe({ name: 'fichie', pure: false })
 
 export class FichierAutomatComponent implements OnInit {
-      dataPlus
+     texte
+     dataPlus
      fichie:any
      fichiers
      fichier:any
+     recherche:string
      fich: FichierModule=new FichierModule
   constructor(public activateRoute:ActivatedRoute,public router:Router, private fichierService:FichierService,
     private sanitizer:DomSanitizer, private listFichier:ListFichierComponent
@@ -52,7 +55,19 @@ export class FichierAutomatComponent implements OnInit {
 
     this.fichierService.getOneFile(this.activateRoute.snapshot.params['id']).subscribe(
       data=>{
-        this.fichie = this.sanitizer.bypassSecurityTrustHtml(data);         
+        this.fichie = this.sanitizer.bypassSecurityTrustHtml(data)
+        // this.sanitizer.bypassSecurityTrustHtml(data).forEach((txt: any)=>{
+        //    this.texte=txt
+        //    console.log(txt)
+        //  })
+        // if(this.fichie =! null){
+        //     console.log("test valider")
+        //     console.log(this.fichie)
+        // }
+        // else{
+        //   console.log("echec")
+        // }
+        console.log(data)
         this.fichiers=data
         //this.fich=data
         console.log('fichier recuperer est'+this.activateRoute.snapshot.params['id'])     
@@ -73,5 +88,19 @@ export class FichierAutomatComponent implements OnInit {
     return JSON.parse(dataPlus);
 }
 
+rechercherManuel(){
+  if(this.recherche == null){
+    console.log("remplir le champ de recherche SVP !!! ")
+  }
+  else{
+    console.log(this.recherche)
+    console.log(this.fichiers)     
+    this.elementExiste()
+  }
 
+}
+
+elementExiste(){
+  
+}
 }
