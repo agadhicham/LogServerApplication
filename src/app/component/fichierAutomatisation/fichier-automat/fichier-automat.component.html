@@ -87,10 +87,7 @@
 
  -->
 
-
-
-
-
+ 
 <div class="row">
     <div class="col-md-4">
         <div class="container">
@@ -98,11 +95,12 @@
               <div class="panel panell panel-primary">
                 <div class="panel-heading" >Actions  <span id="flip2" uk-icon="triangle-down"></span></div>
                 <div class="panel-body" id="panel2">
-                   <div class="row">
+                   <div class="row" >
                       Estimation :<p> Ce fichier vient de serveur ServeurX/Java</p>
                       <div class="col-md-9">
                         <input type="text" class="form-control" [(ngModel)]="recherche" name="recherche" id="recherche"> 
-                        
+                        <input id="myInput" type="text" placeholder="Search..">
+
                       </div>
                       <div class="col-md-2">
                         <button class="btn btn-primary btn-sm" (click)="rechercherManuel()">Rechercher</button>
@@ -186,9 +184,25 @@
                 <div class="panel-group">
                   <div class="panel panell panel-danger">
                     <div class="panel-heading">Fichier logg transformer en format <strong>.txt</strong></div>
-                    <div class="panel-body">
-                      <textarea class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
+                    <div class="panel-body" >
+                      
+                      <table>
+                        <thead>
+                        </thead>
+                        <tbody >
+                        <tr>
+                      <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
                       </textarea>
+                      <div>
+                        <div>
+                          <td>
+                        <input type="text"  disabled>
+                      </td>
+                      </div>
+                      </div>
+                      </tr>
+                      </tbody>
+                      </table>
                     </div>
                   </div>
                   </div>

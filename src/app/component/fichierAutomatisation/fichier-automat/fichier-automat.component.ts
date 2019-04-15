@@ -22,7 +22,7 @@ export class FichierAutomatComponent implements OnInit {
      fichie:any
      fichiers
      fichier:any
-     recherche:string
+     rechercheParCle:string
      fich: FichierModule=new FichierModule
   constructor(public activateRoute:ActivatedRoute,public router:Router, private fichierService:FichierService,
     private sanitizer:DomSanitizer, private listFichier:ListFichierComponent
@@ -89,11 +89,11 @@ export class FichierAutomatComponent implements OnInit {
 }
 
 rechercherManuel(){
-  if(this.recherche == null){
+  if(this.rechercheParCle == null){
     console.log("remplir le champ de recherche SVP !!! ")
   }
   else{
-    console.log(this.recherche)
+    console.log(this.rechercheParCle)
     console.log(this.fichiers)     
     this.elementExiste()
   }
