@@ -21,6 +21,11 @@ import { HomeApplicationLoggComponent } from './component/vue/home-application-l
 
 
 
+// import { AccordionModule } from 'primeng/components/accordion/accordion';
+// import { PanelModule } from 'primeng/components/panel/panel';
+// import { ButtonModule } from 'primeng/components/button/button';
+// import { RadioButtonModule } from 'primeng/components/radioButton/radioButton';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +47,12 @@ import { HomeApplicationLoggComponent } from './component/vue/home-application-l
     NgbModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    // AccordionModule,
+    // PanelModule,
+    // ButtonModule,
+    // RadioButtonModule
+    
   ],
   providers: [FichierService,ServeurService],
   bootstrap: [AppComponent]

@@ -185,24 +185,41 @@
                   <div class="panel panell panel-danger">
                     <div class="panel-heading">Fichier logg transformer en format <strong>.txt</strong></div>
                     <div class="panel-body" >
-                      
-                      <table>
-                        <thead>
-                        </thead>
-                        <tbody >
-                        <tr>
                       <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
                       </textarea>
-                      <div>
-                        <div>
-                          <td>
-                        <input type="text"  disabled>
-                      </td>
-                      </div>
-                      </div>
-                      </tr>
-                      </tbody>
+                    </div>
+                    <br>
+
+                   
+                    <div>
+                      <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                          
+                            <tr>
+                              <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
+                            </tr>
+
+                          
+                        </thead>
+                        <tbody>
+                      
+  
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
+                              </tr>
+                        </tfoot>
                       </table>
+
+                      <h3 class="first">Addons</h3>
+                      <div class="ui-g-12 ui-md-4">
+                        <div class="ui-inputgroup">
+                            <button pButton type="button" icon="pi pi-check" class="ui-button-success"></button>    
+                            <input type="text" pInputText placeholder="Vote">   
+                            <button pButton type="button" icon="pi pi-close" class="ui-button-danger"></button>      
+                        </div>
+                    </div>           
                     </div>
                   </div>
                   </div>
@@ -211,3 +228,5 @@
         </div>
     </div>
 </div>
+
+

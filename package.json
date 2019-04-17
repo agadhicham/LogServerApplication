@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^4.1.0",
+    "all": "0.0.0",
     "angular-bootstrap-md": "^7.4.3",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
@@ -27,6 +28,8 @@
     "jquery": "^3.3.1",
     "ngx-pagination": "^3.2.1",
     "popper.js": "^1.14.7",
+    "primeicons": "^1.0.0",
+    "primeng": "^7.1.1",
     "request-options": "^2.0.0",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
@@ -34,7 +37,7 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular-devkit/build-angular": "^0.13.8",
     "@angular/cli": "~7.3.6",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
