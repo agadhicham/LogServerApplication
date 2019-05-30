@@ -18,6 +18,7 @@ import { FichierAutomatComponent } from './component/fichierAutomatisation/fichi
 import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 import * as $ from 'jquery/dist/jquery.min.js';
 import { HomeApplicationLoggComponent } from './component/vue/home-application-logg/home-application-logg.component';
+import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-searsh/elastic-searsh.component';
 
 
 
@@ -36,6 +37,7 @@ import { HomeApplicationLoggComponent } from './component/vue/home-application-l
     FichierSelectionnerComponent,
     FichierAutomatComponent,
     HomeApplicationLoggComponent,
+    ElasticSearshComponent,
     
    // HttpClientModule
     

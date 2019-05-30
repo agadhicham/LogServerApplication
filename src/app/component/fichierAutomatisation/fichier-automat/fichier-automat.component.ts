@@ -67,7 +67,9 @@ export class FichierAutomatComponent implements OnInit {
         // else{
         //   console.log("echec")
         // }
-        console.log(data)
+        
+        
+        //console.log(data)
         this.fichiers=data
         //this.fich=data
         console.log('fichier recuperer est'+this.activateRoute.snapshot.params['id'])     

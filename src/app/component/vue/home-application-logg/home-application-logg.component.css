@@ -1,0 +1,25 @@
+.img {
+    width: 160px;
+    height: 150px;
+    text-align: center;
+    
+}
+
+.panel-group{
+    margin-top: 10px;
+}
+
+.panel{
+    margin-top: 20px;
+}
+
+.gif-image-home{
+    text-align: center;
+    position: inherit;
+    margin-left: 15%;
+}
+.titre{
+    
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
