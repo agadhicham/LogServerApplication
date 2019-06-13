@@ -4,7 +4,13 @@
     text-align: center;
     
 }
-
+.img3 {
+    width: 160px;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
 .panel-group{
     margin-top: 10px;
 }

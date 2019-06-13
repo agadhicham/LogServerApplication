@@ -7,9 +7,10 @@ import { FichierSelectionnerComponent } from './component/fichier/fichier-select
 import { FichierAutomatComponent } from './component/fichierAutomatisation/fichier-automat/fichier-automat.component';
 import { HomeApplicationLoggComponent } from './component/vue/home-application-logg/home-application-logg.component';
 import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-searsh/elastic-searsh.component';
+import { AideGeneraleComponent } from './component/vue/aide-generale/aide-generale.component';
 
 const routes: Routes = [
-{path:'',pathMatch:"full",redirectTo:"/serveurCat"},
+{path:'',pathMatch:"full",redirectTo:"/homePage"},
 {path:"listFichier" ,component:ListFichierComponent},
 {path:"nouveauFichier", component:NouveauFichierComponent},
 {path:"serveurCat", component:ServeurCategorieComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path:"homeApplication", component:HomeApplicationLoggComponent},
 {path:'listFichierSelectionner/:id', component:FichierSelectionnerComponent},
 {path:"homePage" , component:HomeApplicationLoggComponent},
-{path:"statistique" , component:ElasticSearshComponent}
+{path:"statistique" , component:ElasticSearshComponent},
+{path:"focus",component:AideGeneraleComponent}
 
 
 ];

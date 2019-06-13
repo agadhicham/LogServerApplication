@@ -3,12 +3,25 @@
       <nav class="uk-navbar-container">
           <div class="uk-container uk-container-expand">
         
-              <div uk-navbar>
+            <!-- <div class="uk-child-width-1-2@s uk-grid-small" uk-grid>
+                <div>
+                    <div class="uk-overflow-hidden">
+                        <img src="images/dark.jpg" alt="Example image" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-overflow-hidden">
+                        <img src="images/dark.jpg" alt="Example image" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                    </div>
+                </div>
+            </div> -->
+
+              <div uk-navbar class="uk-overflow-hidden">
                   <ul class="uk-navbar-nav">
-                        <img class="img" src="..\assets\home\mylogo.png" alt="logo Application">
-                      <li class="uk-active"><a [routerLink]="['/listFichier']">Fichiers Logger</a></li>
+                        <img class="img" src="..\assets\home\mylogo.png" alt="logo Application" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                      <li class="uk-active"><a [routerLink]="['/listFichier']" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Fichiers Logger</a></li>
                       <li>
-                          <a href="#">Choix d'une action</a>
+                          <a href="#" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Choix d'une action</a>
                           <div class="uk-navbar-dropdown">
                               <ul class="uk-nav uk-navbar-dropdown-nav">
                                   <li class="uk-active"><a [routerLink]="['/nouveauFichier']" routerLinkActive="router-link-active" >Choisir vos fichiers</a></li>
@@ -17,9 +30,10 @@
                               </ul>
                           </div>
                       </li>
-                      <li><a [routerLink]="['/serveurCat']" routerLinkActive="router-link-active">Serveur</a></li>
-                      <li><a [routerLink]="['/homePage']" routerLinkActive="router-link-active">Home page</a></li>
-                      <li><a [routerLink]="['/statistique']" routerLinkActive="router-link-active">Statistique</a></li>
+                      <li><a [routerLink]="['/serveurCat']" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Serveur</a></li>
+                      <li><a [routerLink]="['/homePage']" routerLinkActive="router-link-active" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Home page</a></li>
+                      <li><a [routerLink]="['/statistique']" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Statistique</a></li>
+                      <li><a [routerLink]="['/focus']" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">focus</a></li>
 
 
                   </ul>

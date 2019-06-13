@@ -19,6 +19,8 @@ import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 import * as $ from 'jquery/dist/jquery.min.js';
 import { HomeApplicationLoggComponent } from './component/vue/home-application-logg/home-application-logg.component';
 import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-searsh/elastic-searsh.component';
+import { AideGeneraleComponent } from './component/vue/aide-generale/aide-generale.component';
+import { FooterComponent } from './component/vue/footer/footer.component';
 
 
 
@@ -38,6 +40,9 @@ import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-
     FichierAutomatComponent,
     HomeApplicationLoggComponent,
     ElasticSearshComponent,
+    AideGeneraleComponent,
+    FooterComponent,
+    
     
    // HttpClientModule
     
@@ -57,6 +62,6 @@ import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-
     
   ],
   providers: [FichierService,ServeurService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
