@@ -84,31 +84,101 @@
           </div>
           </div>
         </div>
-
  -->
-<div class="row">
-    <div class="col-md-4">
-        <div class="container">
- <div class="uk-child-width-1-2@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <div>
-                <img class="img" src="..\assets\home\imag1.png" alt="logo Application">
-        </div> 
-        <h3 class="uk-article-title uk-button uk-button-text titre"><a class="uk-link-reset" href="">Aidé générale</a></h3>                   
-                        <p class="uk-article-meta">Written by <a href="#">
-                          AL AGAD Hicham</a> on 30 Mai 2019. Posted in 
-                          <a href="#">github</a></p>
-    </div>
-    </div>
+ <div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
+  <div>
+      <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
+          <!-- <div>
+              <img class="img1" src="..\assets\home\imag1.png" alt="logo Application">
+           </div>  -->
+           <h6>Actions  <span id="flip2" uk-icon="triangle-down"></span></h6>
+           <div class="panel-body" id="panel2">
+              <div class="row" >
+                 Estimation :<p> Ce fichier vient de serveur ServeurX/Java</p>
+                 <div class="col-md-9">
+                   <input type="text" class="form-control" [(ngModel)]="recherche" name="recherche" id="recherche"> 
+                   <!-- <input id="myInput" type="text" placeholder="Search.."> -->
+
+                 </div>
+                 <div class="col-md-2">
+                   <button class="btn btn-primary btn-sm" (click)="rechercherManuel()">Rechercher</button>
+                 </div>
+              </div>
+
+              <div class="row">
+              <p> Fréquement utilisé: </p>
+               <div class="col-md-9">
+                 <select name="" id="" class="form-control">
+                   <option value="">--Ensenble des mots sera utiliser selon les besoins--</option>
+                 </select>
+               </div>
+               <div class="col-md-2">
+                 <button class="btn btn-primary btn-sm">Rechercher</button>
+               </div>
+            </div>
+
+           </div>    
+          </div>
+  </div>
+  <div>
+    <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
+        <!-- <div>
+            <img class="img2" src="..\assets\home\imag2.png" alt="logo Application">
+         </div>  -->
+         <h6>Actions  <span id="flip2" uk-icon="triangle-down"></span></h6>
+         <div class="panel-heading" >Choix de recherche  <span id="flip4" uk-icon="triangle-down"></span></div>
+         <div class="panel-body" id="panel4">
+                <div>    
+                 <div id="flip1">Par  <span uk-icon="triangle-down"></span></div>
+                 <div id="panel1">
+           <a class="uk-button uk-button-text">exception java</a>                   
+                 </div>
+               </div>
+               <div>     
+                   <div id="flip3">exception serveur  <span  uk-icon="triangle-down"></span>
+                   
+                   </div>
+                   <div id="panel3">
+             <a class="uk-button uk-button-text">Apache</a><br>                   
+             <a class="uk-button uk-button-text">Tomcat</a> <br>
+             <a class="uk-button uk-button-text">Jboss</a> 
+                   </div>
+                 </div>
+         </div>  
+        </div>
+</div>
+<div>
+  <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
+      <!-- <div>
+          <img class="img3" src="..\assets\home\imag5.png" alt="logo Application">
+       </div>  -->
+       <h6>Autre Informations sur ce fichier <span id="flip5" uk-icon="triangle-down"></span></h6>
+       <div class="panel-body" id="panel5">
+         <div >
+ 
+             <div id="flip">Voir plus <span id="flip5" uk-icon="triangle-down"></span></div>
+             <div id="panel" >
+               <div >  
+               <p>
+                     Fichier avec le nom: {{fichier?.fileName}}
+                   </p> 
+                   <p>
+                     Type de ce fichier: {{fichier?.fileType}}
+                   </p>
+                   <p>
+                       date d'action: {{fichier?.currrent}}
+                     </p>
+                 </div>
+             </div>
+      
+       </div>
+     </div>  
+      </div>
 </div>
  </div>
- </div>
- </div>
-
 <div class="row">
     <div class="col-md-4">
-        <div class="container">
+        <!-- <div class="container">
             <div class="panel-group">
               <div class="panel panell panel-primary">
                 <div class="panel-heading" >Actions  <span id="flip2" uk-icon="triangle-down"></span></div>
@@ -140,9 +210,9 @@
                 </div>
               </div>
               </div>
-              </div>
+              </div> -->
 
-              <div class="container">
+              <!-- <div class="container">
                   <div class="panel-group">
                     <div class="panel panell panel-primary">
                       <div class="panel-heading" >Choix de recherche  <span id="flip4" uk-icon="triangle-down"></span></div>
@@ -166,8 +236,8 @@
                       </div>
                     </div>
                     </div>
-                    </div>
-             <div class="container">
+                    </div> -->
+             <!-- <div class="container">
                   <div class="panel-group">
                     <div class="panel pane panel-primary">
                       <div class="panel-heading" >Autre Informations sur ce fichier <span id="flip5" uk-icon="triangle-down"></span></div>
@@ -193,8 +263,48 @@
                     </div>
                     </div>
                     </div>
+                  </div> -->
                   </div>
-                  </div>
+                  <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">                    
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                          <div class="panel-heading">Fichier logg transformer en format <strong>.txt</strong></div>
+                            <div class="panel-body" >
+                              <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
+                              </textarea>
+                            </div>
+                            <br>                          
+                            <div  class="container">
+                              <table  class="table table-bordered" >
+                                <thead>                                 
+                                    <tr>
+                                      <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
+                                    </tr>                                  
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><input type="hidden" name="motCle"/>
+                                    </td><td>Date</td>
+                                    <td>Serveur</td>
+                                    <td>Occurence</td>
+                                  </tr>
+                                  <tr>
+                                    <td> <input type="hidden" name="motCle"/></td>
+                                    <td>Date</td><td>Serveur</td>
+                                    <td>Occurence</td>
+                                  </tr>
+                                  <tr>
+                                    <td> <input type="hidden" name="motCle"/>
+                                    </td><td>Date</td>
+                                    <td>Serveur</td>
+                                    <td>Occurence</td>
+                                  </tr>         
+                                </tbody>
+                              </table>           
+                            </div>
+                            </div>
+                            </div>
+<!-- 
     <div class="col-md-8">
         <div class="panel">
 
@@ -240,6 +350,14 @@
                   </div>
 
         </div>
-    </div>
+    </div> -->
 </div>
 
+<div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top footer" style="background-image: url('../assets/home/hosts.jpg');">
+  <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+      <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">
+              Vésion sur mon stats
+      </h1>
+      <p uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+</div>
