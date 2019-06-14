@@ -21,6 +21,8 @@ import { HomeApplicationLoggComponent } from './component/vue/home-application-l
 import { ElasticSearshComponent } from './component/stats/elastSolution/elastic-searsh/elastic-searsh.component';
 import { AideGeneraleComponent } from './component/vue/aide-generale/aide-generale.component';
 import { FooterComponent } from './component/vue/footer/footer.component';
+import { ExtractionDonneesService } from './service/extraction-donnees.service';
+import { DataExtractionComponent } from './component/extraxtionDonnees/data-extraction/data-extraction.component';
 
 
 
@@ -42,6 +44,7 @@ import { FooterComponent } from './component/vue/footer/footer.component';
     ElasticSearshComponent,
     AideGeneraleComponent,
     FooterComponent,
+    DataExtractionComponent,
     
     
    // HttpClientModule
@@ -61,7 +64,7 @@ import { FooterComponent } from './component/vue/footer/footer.component';
     // RadioButtonModule
     
   ],
-  providers: [FichierService,ServeurService],
+  providers: [FichierService,ServeurService,ExtractionDonneesService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

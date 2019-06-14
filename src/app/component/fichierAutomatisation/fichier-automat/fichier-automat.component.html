@@ -116,7 +116,6 @@
                  <button class="btn btn-primary btn-sm">Rechercher</button>
                </div>
             </div>
-
            </div>    
           </div>
   </div>
@@ -278,7 +277,8 @@
                               <table  class="table table-bordered" >
                                 <thead>                                 
                                     <tr>
-                                      <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
+                                        <button (onclick)="dataExtraction(fich.id)"  routerLinkActive="router-link-active"  class="btn btn-primary btn-sm">extraire</button>
+                                        <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
                                     </tr>                                  
                                 </thead>
                                 <tbody>

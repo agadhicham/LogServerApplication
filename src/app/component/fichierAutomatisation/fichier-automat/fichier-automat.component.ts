@@ -7,6 +7,7 @@ import { template, text } from '@angular/core/src/render3';
 import * as $ from 'jquery/dist/jquery.min.js';
 import { ListFichierComponent } from '../../fichier/list-fichier/list-fichier.component';
 import * as deepEqual from "deep-equal";
+import { ExtractionDonneesService } from 'src/app/service/extraction-donnees.service';
 
 @Component({
   selector: 'app-fichier-automat',
@@ -22,10 +23,12 @@ export class FichierAutomatComponent implements OnInit {
      fichie:any
      fichiers
      fichier:any
+     extrData:any
      rechercheParCle:string
      fich: FichierModule=new FichierModule
-  constructor(public activateRoute:ActivatedRoute,public router:Router, private fichierService:FichierService,
-    private sanitizer:DomSanitizer, private listFichier:ListFichierComponent
+     id:any
+     constructor(public activateRoute:ActivatedRoute,public router:Router, private fichierService:FichierService,
+    private sanitizer:DomSanitizer, private listFichier:ListFichierComponent, private extractionDataService: ExtractionDonneesService
     ) {
 
     console.log('^^^^^^^^^^^^^^^^^^^^^^^^^')
@@ -52,7 +55,9 @@ export class FichierAutomatComponent implements OnInit {
        console.log(error)
      })
    
-
+     console.log("-+-+-+-+-+-+-+-+-+-+")
+     console.log(this.activateRoute.snapshot.params['id'])
+         console.log("-+-+-+-+-+-+-+-+-+-+")
     this.fichierService.getOneFile(this.activateRoute.snapshot.params['id']).subscribe(
       data=>{
         this.fichie = this.sanitizer.bypassSecurityTrustHtml(data)
@@ -66,9 +71,7 @@ export class FichierAutomatComponent implements OnInit {
         // }
         // else{
         //   console.log("echec")
-        // }
-        
-        
+        // }       
         //console.log(data)
         this.fichiers=data
         //this.fich=data
@@ -86,6 +89,7 @@ export class FichierAutomatComponent implements OnInit {
      })
   }
 
+
   ConvertToJSON(dataPlus: any) {
     return JSON.parse(dataPlus);
 }
@@ -102,7 +106,22 @@ rechercherManuel(){
 
 }
 
-elementExiste(){
-  
+dataExtraction(id:string){
+
+  this.extractionDataService.getDataExtractionForOccurenceAndDates(this.activateRoute
+    .snapshot.params['id']).subscribe(data=>{
+      this.extrData=data;
+      console.log("-+-+-+-+-+-+-+-+-+-+")
+      console.log(this.extrData)
+      console.log(this.activateRoute.snapshot.params['id'])
+      console.log("-+-+-+-+-+-+-+-+-+-+")
+
+    },error=>{
+      let message: string="l'extraction des informations de date et d'ocurrence à échoué"
+      console.log(error+message)
+    })
+}
+
+elementExiste(){ 
 }
 }
