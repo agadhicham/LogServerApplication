@@ -54,6 +54,8 @@ export class FichierAutomatComponent implements OnInit {
        console.log(error)
      })
    
+     
+
      console.log("-+-+-+-+-+-+-+-+-+-+")
      console.log(this.activateRoute.snapshot.params['id'])
          console.log("-+-+-+-+-+-+-+-+-+-+")
@@ -109,6 +111,7 @@ dataExtraction(id:string){
   
   this.extractionDataService.getDataExtractionForOccurenceAndDates(this.activateRoute
     .snapshot.params['id']).subscribe(data=>{
+      console.log(this.activateRoute.snapshot.params['id'])
       this.extrData=data;
       console.log("-+-+-+-+-+-+-+-+-+-+")
       console.log(this.extrData)

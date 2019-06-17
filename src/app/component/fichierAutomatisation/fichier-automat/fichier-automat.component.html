@@ -167,6 +167,9 @@
                    <p>
                        date d'action: {{fichier?.currrent}}
                      </p>
+                     <p>
+                        key: {{fichier?.id}}
+                      </p>
                  </div>
              </div>
       
@@ -176,7 +179,7 @@
 </div>
  </div>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-2 marg">
         <!-- <div class="container">
             <div class="panel-group">
               <div class="panel panell panel-primary">
@@ -267,18 +270,19 @@
                   <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">                    
                     <div>
                         <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                          <div class="panel-heading">Fichier logg transformer en format <strong>.txt</strong></div>
+                          <div class="panel-heading">Fichier logg transformer en format <strong>text</strong></div>
                             <div class="panel-body" >
                               <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled" rows="15" cols="136" [innerHTML]="fichie">
                               </textarea>
                             </div>
-                            <br>                          
+                            <br>                                                                                    
                             <div  class="container">
                               <table  class="table table-bordered" >
-                                <thead>                                 
-                                    <tr *ngFor="let fichierId of extreData">
-                                        <button (onclick)="dataExtraction(fichierId.id)" class="btn btn-primary btn-sm">extraire</button>
-                                        <th>Mot Clé: <input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
+                                <thead *ngFor="let fichier of fichier">                                 
+                                    <tr>
+                                      <a (click)="dataExtraction(fichier?.id)">detit</a>
+                                        <!-- <button (onclick)="dataExtraction(fichier.id)" class="btn btn-primary btn-sm">extraire</button> -->
+                                        <th>Mot Clé:<input type="text" name="motCle"/></th><th>Date</th><th>Serveur</th><th>Occurence</th>
                                     </tr>                                  
                                 </thead>
                                 <tbody>
