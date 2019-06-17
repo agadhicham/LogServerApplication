@@ -37,8 +37,7 @@ export class FichierAutomatComponent implements OnInit {
     activateRoute= activateRoute.snapshot.params['id'];
    }
 
-  ngOnInit() {
-     
+  ngOnInit() {     
     this.fichierService.getFilesByCategori(this.activateRoute.snapshot.params['id']).subscribe(data=>{
       this.fichier=data
       console.log("$$$$$$$$$$")
@@ -92,7 +91,7 @@ export class FichierAutomatComponent implements OnInit {
 
   ConvertToJSON(dataPlus: any) {
     return JSON.parse(dataPlus);
-}
+   }
 
 rechercherManuel(){
   if(this.rechercheParCle == null){
@@ -107,7 +106,7 @@ rechercherManuel(){
 }
 
 dataExtraction(id:string){
-
+  
   this.extractionDataService.getDataExtractionForOccurenceAndDates(this.activateRoute
     .snapshot.params['id']).subscribe(data=>{
       this.extrData=data;
@@ -115,7 +114,7 @@ dataExtraction(id:string){
       console.log(this.extrData)
       console.log(this.activateRoute.snapshot.params['id'])
       console.log("-+-+-+-+-+-+-+-+-+-+")
-
+      this.morInformation()
     },error=>{
       let message: string="l'extraction des informations de date et d'ocurrence à échoué"
       console.log(error+message)

@@ -21,12 +21,11 @@
                         <img class="img" src="..\assets\home\mylogo.png" alt="logo Application" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
                       <li class="uk-active"><a [routerLink]="['/listFichier']" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Fichiers Logger</a></li>
                       <li>
-                          <a href="#" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Choix d'une action</a>
+                          <a [routerLink]="['nouveauFichier']"  class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">Choix d'une action</a>
                           <div class="uk-navbar-dropdown">
                               <ul class="uk-nav uk-navbar-dropdown-nav">
-                                  <li class="uk-active"><a [routerLink]="['/nouveauFichier']" routerLinkActive="router-link-active" >Choisir vos fichiers</a></li>
-                                  <li><a href="#">Item</a></li>
-                                  <li><a href="#">Item</a></li>
+                                  <li class="uk-active"><a [routerLink]="['nouveauFichier']" routerLinkActive="router-link-active" class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true" >Choisir vos fichiers</a></li>
+                                
                               </ul>
                           </div>
                       </li>

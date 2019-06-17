@@ -1,6 +1,62 @@
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="clsActivated: uk-transition-active; center: true">
+
+    <ul class="uk-slider-items uk-grid">
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="../assets/home/imag1.png" alt="" class="imgSlide">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="../assets/home/imag2.png" alt="" class="imgSlide">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="../assets/home/imag3.png" alt="" class="imgSlide">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="../assets/home/imag4.png" alt="" class="imgSlide">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+        <li class="uk-width-3-4">
+            <div class="uk-panel">
+                <img src="../assets/home/imag5.png" alt="" >
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Bottom</h3>
+                    <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+
 
 <div class="" style="text-align: center">
-    <h2>Liste des fichier storer</h2>
+    <!-- <h2>Liste des fichier storer</h2> -->
   </div>
   <!-- <div class="col-sm-12 row">
     <div class="col-sm-3"></div>
@@ -9,7 +65,7 @@
           <button class="uk-button uk-button-text col-sm-2" style="color: aqua;" (click)="chercher()">rechercher</button>
     </div>
   </div> -->
-  <div class="uk-child-width-1-4@s" uk-grid>
+  <!-- <div class="uk-child-width-1-4@s" uk-grid>
       <div *ngFor="let fichier of fichier">
           <div class="uk-card uk-card-default uk-card-small uk-card-body uk-card-hover" >
               <p>
@@ -21,13 +77,44 @@
                 <p>
                   <span class="uk-label uk-label-success">Type de ce fichier:</span>  {{fichier?.fileType}}
                 </p>
-                <!-- <p>
-                  <span class="uk-label uk-label-warning">Objet récuperer:</span> {{fichier?.data}}
-                </p>       -->
+               
                 <div class="uk-card-footer">
                   <button (onclick)="getOneFile(fichier.id)" [routerLink]="['/fichierAutomatiser',fichier.id]" routerLinkActive="router-link-active"  class="btn btn-primary btn-sm">selectionner</button>
                 </div>
               </div>
           </div>
+      </div>
+       -->
+      <div class="uk-child-width-1-4@s panel uk-grid-match" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500; repeat: true">
+        <div *ngFor="let fichier of fichier">
+            <div class="uk-card uk-card-default uk-card-hover uk-card-body card" >
+                  <!-- <div class="uk-card-badge uk-label">Badge</div> -->
+                    <p>
+                        <span class="uk-badge">Fichier avec le nom:</span><br> {{fichier?.fileName}}
+                      </p> 
+                      <p>
+                          <span class="uk-badge">Type de ce fichier:</span><br>   {{fichier?.fileType}}
+                      </p>
+                      <p>
+                          <span class="uk-badge">Fichier sous numéro:</span><br>  {{fichier?.id}}
+                      </p>                    
+                      <!-- <p>
+                        <span class="uk-label uk-label-warning">Objet récuperer:</span> {{fichier?.data}}
+                      </p>       -->
+                      <div class="uk-card-footer footerCard">
+                          <h5><a class="uk-link-heading uk-button uk-button-text" (onclick)="getOneFile(fichier.id)" [routerLink]="['/fichierAutomatiser',fichier.id]" routerLinkActive="router-link-active">selectionner</a></h5>
+                        <!-- <button (onclick)="getOneFile(fichier.id)" [routerLink]="['/fichierAutomatiser',fichier.id]" routerLinkActive="router-link-active"  class="btn btn-info  btn-sm">selectionner</button> -->
+                      </div>
+                </div>
+        </div>       
+       </div>
+
+       <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top footer" style="background-image: url('../assets/home/hosts.jpg');">
+        <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+            <h1 uk-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">
+                    Vésion sur mon stats
+            </h1>
+            <p uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
       </div>
       
