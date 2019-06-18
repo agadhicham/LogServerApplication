@@ -10,7 +10,7 @@ export class ExtractionDonneesService {
   constructor(private httpExtractionDonnee:HttpClient) { }
 
     getDataExtractionForOccurenceAndDates(id:string)  {
-    return this.httpExtractionDonnee.get(this.urlPart+"server/serverDate/" +id)
+    return this.httpExtractionDonnee.get(this.urlPart+"server/serverDate/"+id)
   }
 
 

@@ -278,7 +278,7 @@
                             <br>                                                                                    
                             <div  class="container">
                               <table  class="table table-bordered" >
-                                <thead *ngFor="let fichier of fichier">                                 
+                                <thead>                                 
                                     <tr>
                                       <a (click)="dataExtraction(fichier?.id)">detit</a>
                                         <!-- <button (onclick)="dataExtraction(fichier.id)" class="btn btn-primary btn-sm">extraire</button> -->
@@ -356,6 +356,7 @@
         </div>
     </div> -->
 </div>
+<button (click)="dataExtraction()">{{fichier.id}}</button>
 
 <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top footer" style="background-image: url('../assets/home/hosts.jpg');">
   <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
@@ -365,3 +366,6 @@
       <p uk-parallax="opacity: 0,1,1; y: 100,0,0; x: -100,-100,0; scale: 0.5,1,1; viewport: 0.5;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </div>
 </div>
+
+<button onclick=dataExtraction(fichier.id)>click me</button>
+<button (click)="dataExtraction(fichier?.id)"> clk</button>

@@ -54,7 +54,7 @@ export class FichierAutomatComponent implements OnInit {
        console.log(error)
      })
    
-     
+
 
      console.log("-+-+-+-+-+-+-+-+-+-+")
      console.log(this.activateRoute.snapshot.params['id'])
@@ -110,14 +110,13 @@ rechercherManuel(){
 dataExtraction(id:string){
   
   this.extractionDataService.getDataExtractionForOccurenceAndDates(this.activateRoute
-    .snapshot.params['id']).subscribe(data=>{
-      console.log(this.activateRoute.snapshot.params['id'])
+    .snapshot.params[id]).subscribe(data=>{
+      console.log(this.activateRoute.snapshot.params[id])
       this.extrData=data;
       console.log("-+-+-+-+-+-+-+-+-+-+")
       console.log(this.extrData)
-      console.log(this.activateRoute.snapshot.params['id'])
+      console.log(this.activateRoute.snapshot.params[id])
       console.log("-+-+-+-+-+-+-+-+-+-+")
-      this.morInformation()
     },error=>{
       let message: string="l'extraction des informations de date et d'ocurrence à échoué"
       console.log(error+message)
