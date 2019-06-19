@@ -112,7 +112,7 @@ rechercherManuel(){
 
 }
 getJsonData(id:string){
-  return this.http.get('http://localhost:8081/tomcat/server/serverDate/'+id).subscribe(
+  return this.http.get('http://localhost:8081/tomcat/server/serverDate/'+id,{responseType:'text'}).subscribe(
     data=>{
       this.extrData=data
       console.log(this.extrData)
@@ -123,7 +123,7 @@ getJsonData(id:string){
 }
 
 getOcurrence(id:string){
-  return this.http.get('http://localhost:8081/tomcat/server/serverCleOccurence/'+id).subscribe(
+  return this.http.get('http://localhost:8081/tomcat/server/serverCleOccurence/'+id,{responseType:'text'}).subscribe(
     data=>{
       this.extrDataOcurrence=data
       console.log(this.extrDataOcurrence)
@@ -135,7 +135,7 @@ getOcurrence(id:string){
 
 
 getDateCompleteFormatForWorldKey(id:string){
-  return this.http.get('http://localhost:8081/tomcat/server/serverDateFormat/'+id).subscribe(
+  return this.http.get('http://localhost:8081/tomcat/server/serverDateFormat/'+id,{responseType:'text'}).subscribe(
     data=>{
       this.extrDataDate=data
       console.log(this.extrDataDate)
