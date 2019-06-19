@@ -8,6 +8,7 @@ import * as $ from 'jquery/dist/jquery.min.js';
 import { ListFichierComponent } from '../../fichier/list-fichier/list-fichier.component';
 import * as deepEqual from "deep-equal";
 import { ExtractionDonneesService } from 'src/app/service/extraction-donnees.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fichier-automat',
@@ -18,17 +19,21 @@ import { ExtractionDonneesService } from 'src/app/service/extraction-donnees.ser
 @Pipe({ name: 'fichie', pure: false })
 
 export class FichierAutomatComponent implements OnInit {
+     //http:HttpClient
      texte
      dataPlus
      fichie:any
      fichiers
      fichier:any
      extrData:any
+     extrDataOcurrence:any
+     extrDataDate:any
      rechercheParCle:string
      fich: FichierModule=new FichierModule
      id:any
      constructor(public activateRoute:ActivatedRoute,public router:Router, private fichierService:FichierService,
-    private sanitizer:DomSanitizer, private listFichier:ListFichierComponent, private extractionDataService: ExtractionDonneesService
+    private sanitizer:DomSanitizer, private listFichier:ListFichierComponent, private extractionDataService: ExtractionDonneesService,
+    private http:HttpClient
     ) {
 
     console.log('^^^^^^^^^^^^^^^^^^^^^^^^^')
@@ -105,6 +110,39 @@ rechercherManuel(){
     this.elementExiste()
   }
 
+}
+getJsonData(id:string){
+  return this.http.get('http://localhost:8081/tomcat/server/serverDate/'+id).subscribe(
+    data=>{
+      this.extrData=data
+      console.log(this.extrData)
+    }
+  )
+  
+  //(rmapes => res.json());
+}
+
+getOcurrence(id:string){
+  return this.http.get('http://localhost:8081/tomcat/server/serverCleOccurence/'+id).subscribe(
+    data=>{
+      this.extrDataOcurrence=data
+      console.log(this.extrDataOcurrence)
+    }
+  )
+  
+  //(rmapes => res.json());
+}
+
+
+getDateCompleteFormatForWorldKey(id:string){
+  return this.http.get('http://localhost:8081/tomcat/server/serverDateFormat/'+id).subscribe(
+    data=>{
+      this.extrDataDate=data
+      console.log(this.extrDataDate)
+    }
+  )
+  
+  //(rmapes => res.json());
 }
 
 dataExtraction(id:string){
