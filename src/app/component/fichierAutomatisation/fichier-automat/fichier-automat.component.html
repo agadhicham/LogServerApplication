@@ -85,13 +85,13 @@
           </div>
         </div>
  -->
- <div class="uk-child-width-1-3@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
+ <div class="uk-child-width-1-4@m" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .uk-card; delay: 300; repeat: true">
   <div>
       <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
           <!-- <div>
               <img class="img1" src="..\assets\home\imag1.png" alt="logo Application">
            </div>  -->
-           <h6>Actions  <span id="flip2" uk-icon="triangle-down"></span></h6>
+           <h6 class="slide">Actions  <span id="flip2" uk-icon="triangle-down"></span></h6>
            <div class="panel-body" id="panel2">
               <div class="row" >
                  Estimation :<p> Ce fichier vient de serveur ServeurX/Java</p>
@@ -144,19 +144,55 @@
                    </div>
                  </div>
          </div>   -->
-         <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled"  rows="15" cols="300" >
+         <h6 class="slide" >Nombre d'ocurrence des instances:  <span id="flipocc" uk-icon="triangle-down"></span></h6>
+         <div id="panelocc">
+         <h5 class="p">{{extrDataOcurrence}}</h5>
+         </div>
+          <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled"  rows="15" cols="300" >
               {{extrData}}
         </textarea>
-        <p>Nombre d'ocurrence des instances: {{extrDataOcurrence}}</p>
-        <p>Date pour les instances: {{extrDataDate}}</p>
-        </div>
+       
+      </div>
+</div>
+<div>
+  <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
+      <!-- <div>
+          <img class="img2" src="..\assets\home\imag2.png" alt="logo Application">
+       </div>  -->
+       <!-- <h6>Actions  <span id="flip2" uk-icon="triangle-down"></span></h6>
+       <div class="panel-heading" >Choix de recherche  <span id="flip4" uk-icon="triangle-down"></span></div>
+       <div class="panel-body" id="panel4">
+              <div>    
+               <div id="flip1">Par  <span uk-icon="triangle-down"></span></div>
+               <div id="panel1">
+         <a class="uk-button uk-button-text">exception java</a>                   
+               </div>
+             </div>
+             <div>     
+                 <div id="flip3">exception serveur  <span  uk-icon="triangle-down"></span>
+                 
+                 </div>
+                 <div id="panel3">
+           <a class="uk-button uk-button-text">Apache</a><br>                   
+           <a class="uk-button uk-button-text">Tomcat</a> <br>
+           <a class="uk-button uk-button-text">Jboss</a> 
+                 </div>
+               </div>
+       </div>   -->
+       <h6 class="slide">les dates d'erreur: <span id="flip5" uk-icon="triangle-down"></span></h6>
+         <div class="panel-body" id="panel5">
+       <textarea id="myTable" class="text form-control" style="font-size: 14px;" disabled="disabled"  rows="15" cols="300" >
+       {{extrDataDate}}      
+      </textarea>
+      </div>
+      </div>
 </div>
 <div>
   <div class="uk-card uk-card-default uk-card-hover uk-card-body card">
       <!-- <div>
           <img class="img3" src="..\assets\home\imag5.png" alt="logo Application">
        </div>  -->
-       <h6>Autre Informations sur ce fichier <span id="flip5" uk-icon="triangle-down"></span></h6>
+       <h6 class="slide">Autre Informations sur ce fichier <span id="flip5" uk-icon="triangle-down"></span></h6>
        <div class="panel-body" id="panel5">
          <div >
  

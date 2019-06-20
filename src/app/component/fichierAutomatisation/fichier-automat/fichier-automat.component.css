@@ -37,3 +37,10 @@
 .text{
     text-size-adjust: 7;
 }
+.p{
+    color: goldenrod;
+}
+.slide {
+    color: #004d99;
+    text-decoration-color: wheat;
+}

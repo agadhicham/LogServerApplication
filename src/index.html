@@ -64,6 +64,13 @@ $(document).ready(function(){
     });
 </script>
 <script> 
+  $(document).remove(function(){
+    $("#flipocc").click(function(){
+      $("#panelocc").slideToggle("slow");
+    });
+  });
+</script>
+<script> 
 $(document).ready(function(){
   $("#flip1").click(function(){
     $("#panel1").slideToggle("slow");
